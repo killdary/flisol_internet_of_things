@@ -1,0 +1,82 @@
+#:import C kivy.utils.get_color_from_hex
+
+<Button>:
+    font_name: 'Roboto'
+    font_size: '30sp'
+    halign: 'center'
+    markup: True
+    disabled_color: C('#ffffff')
+    #disabled: True
+
+    #disabled: True
+    state: 'down'
+
+<GridLayout>:
+    cols: 2
+    spacing: 10
+    padding: 10
+
+
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '70dp'
+
+        Label:
+            text: u'[b]Tiwhu[/b] Domotica'
+            font_size: '40sp'
+            markup:True
+
+        Button:
+            text: 'config'
+
+    GridLayout:
+        ToggleButton:
+            id: lampada
+            background_color: C('#3498db')
+            text: u'[b]L[/b]ampada\n[font=Metro]\uf106[/font]\nON'
+            disabled: False
+            state: 'normal'
+
+        Button:
+            id: termometro
+            background_color: C('#e74c3c')
+            text: u'[font=Metro]\uf101[/font]\n25 [b]C\xba[/b]'
+
+        Button:
+            id: presenca
+            background_color: C('#1abc9c')
+            text: u'[b]P[/b]resenca [font=Metro]\uf104[/font]\n[size=50]+[/size]'
+
+        Button:
+            id: porta
+            background_color: C('#f1c40f')
+            text: u'[b]P[/b]orta [font=Metro]\uf103[/font]\nAberta'
+
+        Button:
+            id: luminosidade
+            background_color: C('#9b59b6')
+            text: u'[b]L[/b]umin. [font=Metro]\uf105[/font]\n85%'
+
+        Button:
+            id: distancia
+            background_color: C('#2d89ef')
+            text: u'[b]D[/b]istancia [font=Metro]\uf108[/font]\n 2 M'
+
+    BoxLayout:
+        orietation: 'horizontal'
+        size_hint_y: None
+        height: '70dp'
+
+        Label:
+            text: "[b]D[/b]imer"
+            font_size: '40sp'
+            color: C('#ffffff')
+            markup: True
+
+        Slider:
+            id: dimer

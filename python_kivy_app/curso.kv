@@ -1,0 +1,84 @@
+#:import C kivy.utils.get_color_from_hex
+
+#cria uma caixa que vai colocando componentes na vertical
+#eh possivel colocar caixas dentro de caixas para mudar a organização
+
+#O paddind é uma propriedade para criar um espaço enre a caixa e a janela,
+#se a caixa esta dentro de outra ele cria um espaço entre as caixas
+
+#O spacing cria um espaco entre os componentes dentro de uma caixa
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+#todo componente criado dentro de uma caixar ela pertence a caixa mais proxima dela, inclusive
+#as proprias caixas que estierem dentro
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '70dp'
+        spacing: 10
+
+        Label:
+            size_hint_x: None
+            width: '100dp'
+            text: 'Servidor: '
+
+        TextInput:
+            multiline: False
+            font_size: '20sp'
+
+
+        Button:
+            size_hint_x: None
+            width: '100dp'
+            text: 'Conectar'
+
+
+    GridLayout:
+        cols: 2
+        spacing: 10
+
+        Label:
+            text: 'Lampada'
+
+        Button:
+            text: 'Apagada'
+
+        Label:
+            text: 'Temperatura: 25 Cº'
+
+        Button:
+            text: 'Atualizar'
+
+        Label:
+            text: 'Porta: Aberta'
+
+        Button:
+            text: 'Atualizar'
+
+        Label:
+            text: 'Presença: +'
+
+        Button:
+            text: 'Atualizar'
+
+        Label:
+            text: 'Luminosidade: 75 %'
+
+        Button:
+            text: 'Atualizar'
+
+        Label:
+            text: 'Distância: 2 M'
+
+        Button:
+            text: 'Atualizar'
+
+        Label:
+            text: 'Cortina'
+
+        Slider:
+			id: s2
